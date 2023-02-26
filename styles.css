@@ -13,11 +13,16 @@ body {
 .box {
   display: flex;
   flex-direction: column;
-  border: 1px solid grey;
+  border: none;
   border-radius: 5px;
   padding: 15px;
   max-width: 250px;
   gap: 15px;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.7);
+}
+
+.box:hover {
+  background: #8080803b;
 }
 
 .text {
@@ -30,7 +35,10 @@ body {
 .text div { grid-area: icon; font-size: 50px; }
 .text h3 { grid-area: head; margin: 0; }
 .text p { grid-area: info; }
-p { margin: 0; }
+p {
+  margin: 0; 
+  color: grey;
+}
 
 .link {
   display: flex;
