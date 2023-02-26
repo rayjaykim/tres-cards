@@ -1,5 +1,7 @@
 body {
   font-family: 'Tilt Neon', cursive;
+  margin: 20px;
+  padding: 0;
 }
 
 .container {
@@ -8,7 +10,35 @@ body {
   gap: 20px;
 }
 
+.box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 15px;
+  max-width: 250px;
+  gap: 15px;
+}
+
+.text {
+  display: grid;
+  grid-template-areas: 
+  "icon head head"
+  "icon info info";
+  grid-gap: 15px;
+}
+.text div { grid-area: icon; font-size: 50px; }
+.text h3 { grid-area: head; margin: 0; }
+.text p { grid-area: info; }
+p { margin: 0; }
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
-  color: black;
+  color: grey;
 }
