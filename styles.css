@@ -1,3 +1,63 @@
 body {
   font-family: 'Tilt Neon', cursive;
+  margin: 20px;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  max-width: 250px;
+  gap: 15px;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.7);
+}
+
+.box:hover {
+  background: #8080803b;
+}
+
+.text {
+  display: grid;
+  grid-template-areas: 
+  "icon head head"
+  "icon info info";
+  grid-gap: 15px;
+}
+.text div { grid-area: icon; font-size: 50px; }
+.text h3 { grid-area: head; margin: 0; }
+.text p { grid-area: info; }
+p {
+  margin: 0; 
+  color: grey;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+@media (max-width: 375px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .box {
+    max-width: 100%;
+  }
 }
